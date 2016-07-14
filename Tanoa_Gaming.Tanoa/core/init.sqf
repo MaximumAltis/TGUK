@@ -185,3 +185,9 @@ if (life_HC_isActive) then {
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";
+
+
+[getplayerUid player, player] remoteExec ["life_fnc_getBounty",2];
+waitUntil{!isNil "myBounty"};
+life_first_wUpdate = true;
+[] spawn life_fnc_hudUpdateWanted;

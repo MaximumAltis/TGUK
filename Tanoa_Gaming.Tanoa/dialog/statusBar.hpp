@@ -49,7 +49,7 @@ class osefStatusBar {
         };
 		
         class statusBarBank {
-			idc = 555558;
+			idc = 1203;
 			x = safezoneX + safezoneW - 0.18;
 			y = safezoneY + safezoneH - 0.17;
 			w = 0.18;

@@ -228,6 +228,7 @@ class Life_Client_Core {
 		class sendMSG {};
 		class getMSG {};
 		class licenses {};
+		class hudUpdateWanted {};
     };
 
     class Gangs {

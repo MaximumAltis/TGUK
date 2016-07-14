@@ -298,6 +298,7 @@ class Life_Client_Core {
 		class newLifeRule {};
 		class bloodbag {};
 		class bloodbagself {};
+		class deadBloodEffect {}
     };
 
     class Network {

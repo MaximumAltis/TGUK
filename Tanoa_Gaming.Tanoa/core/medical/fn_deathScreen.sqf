@@ -21,6 +21,7 @@ waitUntil {
 			if (_distance < _nearby) then { _nearby = _distance; };
 		};
 	} foreach playableUnits;
+	if(!(life_bloodActionPlaying)) then {life_bloodActionPlaying = true; [(floor(random (85))) + 5] call life_fnc_deadBloodEffect;};
     _medicsOnline ctrlSetText format[localize "STR_Medic_Online",independent countSide playableUnits];
     if (_nearby == 99999) then { _medicsNear ctrlSetText format["Nearest Medic: None Near",_nearby]; }
 	else { _medicsNear ctrlSetText format["Nearest Medic: %1m",[(round _nearby)] call life_fnc_numberText]; };

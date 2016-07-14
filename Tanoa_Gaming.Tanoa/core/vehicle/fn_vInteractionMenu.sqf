@@ -88,10 +88,10 @@ if (playerSide isEqualTo west) then {
             _Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
             if (crew _curTarget isEqualTo [] && {canMove _curTarget} && {locked _curTarget isEqualTo 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
         } else {
-            _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-            if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
-        };
+            	_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
+				_Btn2 buttonSetAction "[] spawn {hint ""Stand back! The vehicle will unflip in 5 seconds!""; uiSleep (5); life_vInact_curTarget setVectorUp [0,0,1]; life_vInact_curTarget setPosASL [getPosASL life_vInact_curTarget select 0, getPosASL life_vInact_curTarget select 1 , getTerrainHeightASL (getPos life_vInact_curTarget) + 0.75];}; closeDialog 0;";
+				if(count crew _curTarget == 0 && _curTarget in life_vehicles) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false;};
+			};
     };
     if (typeOf _curTarget == "O_Truck_03_device_F") then {
         _Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";

@@ -62,5 +62,5 @@ if(life_firstSpawn) then {
 };
 [] spawn life_fnc_statusBar;
 [] call life_fnc_playerSkins;
-[] call life_fnc_hudSetup;
+//[] call life_fnc_hudSetup;
 life_is_alive = true;

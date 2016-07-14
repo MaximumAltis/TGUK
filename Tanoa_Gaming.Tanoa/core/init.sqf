@@ -140,7 +140,7 @@ player addRating 99999999;
 
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 0 cutText ["","BLACK IN"];
-[] call life_fnc_hudSetup;
+//[] call life_fnc_hudSetup;
 
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;

@@ -69,5 +69,5 @@ if (vehicle _unit isEqualTo _unit) then {
 	};
 };
 
-[] spawn life_fnc_hudUpdate;
+//[] spawn life_fnc_hudUpdate;
 _damage;

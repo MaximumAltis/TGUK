@@ -98,7 +98,7 @@ for "_i" from 0 to 1 step 0 do {
                 _walkDis = 0;
                 life_thirst = life_thirst - 5;
                 life_hunger = life_hunger - 5;
-                [] call life_fnc_hudUpdate;
+                //[] call life_fnc_hudUpdate;
             };
         };
         _lastPos = visiblePosition player;

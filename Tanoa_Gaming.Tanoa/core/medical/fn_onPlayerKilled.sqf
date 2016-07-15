@@ -99,7 +99,7 @@ if (!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _k
 
         //Get rid of this if you don't want automatic vehicle license removal.
         if (!local _killer) then {
-            [2] remoteExecCall ["life_fnc_removeLicenses",_killer];
+          //  [2] remoteExecCall ["life_fnc_removeLicenses",_killer];
         };
     } else {
 
@@ -110,7 +110,7 @@ if (!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _k
         };
 
         if (!local _killer) then {
-            [3] remoteExecCall ["life_fnc_removeLicenses",_killer];
+           // [3] remoteExecCall ["life_fnc_removeLicenses",_killer];
         };
     };
 };
@@ -122,7 +122,7 @@ _containers = nearestObjects[getPosATL player,["WeaponHolderSimulated"],5];
 
 //Killed by cop stuff...
 if (side _killer isEqualTo west && playerSide != west) then {
-    life_copRecieve = _killer;
+  //  life_copRecieve = _killer;
     //Did I rob the federal reserve?
     if (!life_use_atm && {CASH > 0}) then {
         [format[localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

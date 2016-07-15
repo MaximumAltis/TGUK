@@ -45,6 +45,7 @@ aFunction =
 
 myBounty call aFunction;
 waitUntil{!isNil "stringedMyBounty"};
+player setVariable ["StringedBounty",stringedMyBounty,true];
 //((uiNamespace getVariable ["osefStatusBar",displayNull]) displayCtrl 1203) ctrlSetText format["$%1",stringedMyBounty];
 uiSleep 1;
 bountyToAdd = 0;

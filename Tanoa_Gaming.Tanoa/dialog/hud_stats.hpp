@@ -1,6 +1,7 @@
 #define ST_CENTER         0x02
 /*
     Author: Daniel Stuart
+
     File: hud_stats.hpp
 */
 

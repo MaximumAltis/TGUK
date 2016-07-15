@@ -29,10 +29,4 @@
 #include "FuelStat.hpp"
 #include "AltisPhone.hpp"
 #include "newsStation.hpp"
-#include "apps.hpp" //new phone?
-#include "infoMenu.hpp" //new phone
-#include "agb.hpp"
-#include "banking.hpp"
-#include "license.hpp"
-#include "LicensesDialog.hpp"
-#include "statusBar.hpp"
+#include "placeables.hpp" //Maxi Cop objects

@@ -17,11 +17,13 @@ switch (playerSide) do {
 
     case civilian: {
         ctrlShow[2012,false];
+		ctrlShow[20003,false]; // COP Placeables
     };
 
     case independent: {
         ctrlShow[2012,false];
         ctrlShow[2011,false];
+		ctrlShow[20003,false]; // COP Placeables
     };
 };
 

@@ -1,141 +1,88 @@
 class Life_key_management {
-	idd = 2700;
-	name= "life_key_chain";
-	movingEnable = 0;
-	enableSimulation = 1;
-	onLoad = "[] spawn life_fnc_keyMenu;";
-	
-	class controlsBackground {
-		class InventoryBack:Life_RscPicture {
-			text = "textures\handy\handy_keys.paa";
-			idc = -1;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.225 * safezoneH + safezoneY;
-			w = 0.500156 * safezoneW;
-			h = 0.858 * safezoneH;
-		};
-	};
-	
-	class controls {
-		
-		class KeyChainList : Life_RscListBox 
-		{
-			idc = 2701;
-			text = "";
-			sizeEx = "0.022 * safeZoneH";
-			
-			x = 0.768125 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
-			w = 0.175313 * safezoneW;
-			h = 0.319 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-		};
-		
-		class NearPlayers : Life_RscCombo
-		{
-			idc = 2702;
-		
-			x = 0.768125 * safezoneW + safezoneX;
-			y = 0.852 * safezoneH + safezoneY;
-			w = 0.175313 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0.3};
-		
-		};
-		
-		class DropKey : Life_RscButtonMenu
-		{
-			idc = -1;
-			tooltip = "$STR_Keys_DropKey";
-			onButtonClick = "[] call life_fnc_keyDrop";
-			x = 0.768125 * safezoneW + safezoneX;
-			y = 0.8157 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.022 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class GiveKey : Life_RscButtonMenu {
-			idc = 2703;
-			tooltip = "$STR_Keys_GiveKey";
-			onButtonClick = "[] call life_fnc_keyGive";
-			x = 0.860937 * safezoneW + safezoneX;
-			y = 0.8157 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.022 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonSyncData : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "[] call SOCK_fnc_syncData;";
-			size = "0.022 * safeZoneH";
-			x = 0.907344 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "$STR_PM_SyncData";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonClose : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "closeDialog 0;closeDialog 0;";
-			x = 0.783594 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "$STR_Global_Close";
-			size = "0.022 * safeZoneH";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonHome : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "closeDialog 0;";
-			x = 0.845468 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "HOME";
-			size = "0.022 * safeZoneH";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-	};
+    idd = 2700;
+    name= "life_key_chain";
+    movingEnable = 0;
+    enableSimulation = 1;
+    onLoad = "[] spawn life_fnc_keyMenu;";
+
+    class controlsBackground {
+        class Life_RscTitleBackground: Life_RscText {
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            idc = -1;
+            x = 0.1;
+            y = 0.2;
+            w = 0.6;
+            h = (1 / 25);
+        };
+
+        class MainBackground: Life_RscText {
+            colorBackground[] = {0, 0, 0, 0.7};
+            idc = -1;
+            x = 0.1;
+            y = 0.2 + (11 / 250);
+            w = 0.6;
+            h = 0.6 - (22 / 250);
+        };
+    };
+
+    class controls {
+        class Title: Life_RscTitle {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = -1;
+            text = "$STR_Keys_Title";
+            x = 0.1;
+            y = 0.2;
+            w = 0.6;
+            h = (1 / 25);
+        };
+
+        class KeyChainList: Life_RscListBox {
+            idc = 2701;
+            text = "";
+            sizeEx = 0.035;
+            x = 0.12;
+            y = 0.26;
+            w = 0.56;
+            h = 0.370;
+        };
+
+        class CloseButtonKey: Life_RscButtonMenu {
+            idc = -1;
+            text = "$STR_Global_Close";
+            onButtonClick = "closeDialog 0;";
+            x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.8 - (1 / 25);
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+
+        class NearPlayers: Life_RscCombo {
+            idc = 2702;
+            x = 0.26;
+            y = 0.645;
+            w = 0.275;
+            h = 0.03;
+        };
+
+        class DropKey: Life_RscButtonMenu {
+            idc = -1;
+            text = "$STR_Keys_DropKey";
+            onButtonClick = "[] call life_fnc_keyDrop";
+            x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.8 - (1 / 25);
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+
+        class GiveKey: Life_RscButtonMenu {
+            idc = 2703;
+            text = "$STR_Keys_GiveKey";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call life_fnc_keyGive";
+            x = 0.32;
+            y = 0.69;
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+    };
 };

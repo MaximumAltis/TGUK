@@ -288,7 +288,18 @@ switch (_code) do {
             };
         };
 	};
-
+	
+	//Cop Placeables
+	if (life_barrier_active) then {
+	switch (_code) do {
+		//enter key
+		case 28: {
+			[] spawn life_fnc_placeablesPlaceComplete;
+		};
+	};
+	true;
+    };
+	
     //U Key
     case 22: {
         if (!_alt && !_ctrlKey) then {

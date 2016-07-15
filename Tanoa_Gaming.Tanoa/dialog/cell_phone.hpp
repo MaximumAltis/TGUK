@@ -1,317 +1,143 @@
 class Life_cell_phone {
-	idd = 3000;
-	name= "life_cell_phone";
-	movingEnable = 0;
-	enableSimulation = 1;
-	onLoad = "[true] spawn life_fnc_cellphone";
-	
-	class controlsBackground {
-		class InventoryBack:Life_RscPicture {
-			idc = -1;
-			text = "textures\handy\handy_facebook.paa";
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.225 * safezoneH + safezoneY;
-			w = 0.500156 * safezoneW;
-			h = 0.858 * safezoneH;
-		};
-	};
-	
-	class controls {
-		
-		class PlayerList : Life_RscListBox {
-			idc = 3004;
-			sizeEx = "0.022 * safeZoneH";
-			x = 0.752656 * safezoneW + safezoneX;
-			y = 0.555 * safezoneH + safezoneY;
-			w = 0.20625 * safezoneW;
-			h = 0.374 * safezoneH;
-			colorBackground[] = {0,0,0,0.3};
-		};
-		class textEdit : Life_RscEdit {
-		
-			idc = 3003;
-			
-			text = "";
-			sizeEx = "0.022 * safeZoneH";
-			x = 0.799062 * safezoneW + safezoneX;
-			y = 0.44225 * safezoneH + safezoneY;
-			w = 0.154687 * safezoneW;
-			h = 0.022 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-		};
-		class TextMsgButton : life_RscButtonMenu {
-			idc = 3015;
-			tooltip = "$STR_CELL_TextMSGBtn";
-			onButtonClick = "[] call TON_fnc_cell_textmsg";
-			size = "0.022 * safeZoneH";
-			
-			x = 0.768125 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		class AdminMsgButton : life_RscButtonMenu {
-			idc = 3020;
-			tooltip = "$STR_CELL_AdminMsg";
-			onButtonClick = "[] call TON_fnc_cell_adminmsg";
-			size = "0.022 * safeZoneH";
-			
-			x = 0.902187 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.0464062 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonSyncData : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "[] call SOCK_fnc_syncData;";
-			size = "0.022 * safeZoneH";
-			x = 0.907344 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "$STR_PM_SyncData";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonClose : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "closeDialog 0;closeDialog 0;";
-			x = 0.783594 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "$STR_Global_Close";
-			size = "0.022 * safeZoneH";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonHome : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "closeDialog 0;";
-			x = 0.845468 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "HOME";
-			size = "0.022 * safeZoneH";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-	};
-};
+    idd = 3000;
+    name= "life_cell_phone";
+    movingEnable = 0;
+    enableSimulation = 1;
+    onLoad = "[] spawn life_fnc_cellphone";
 
-class Life_SOS {
-	idd = 3001;
-	name= "life_SOS";
-	movingEnable = 0;
-	enableSimulation = 1;
-	onLoad = "[false] spawn life_fnc_cellphone";
-	
-	class controlsBackground {
-		class InventoryBack:Life_RscPicture {
-			idc = -1;
-			text = "textures\handy\handy_sos.paa";
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.225 * safezoneH + safezoneY;
-			w = 0.500156 * safezoneW;
-			h = 0.858 * safezoneH;
-		};
-	};
-	
-	class controls {
-		class textEdit : Life_RscEdit {
-		
-			idc = 3003;
-			
-			text = "";
-			sizeEx = "0.022 * safeZoneH";
-			onMouseEnter = "";
-			style = 0x00 + 0x200;
-			x = 0.753275 * safezoneW + safezoneX;
-			y = 0.6782 * safezoneH + safezoneY;
-			w = 0.20625 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
-		};
-		
-		class TextCopButton : life_RscButtonMenu {
-			idc = 3016;
-			tooltip = "$STR_CELL_TextPolice";
-			onButtonClick = "[] call TON_fnc_cell_textcop";
-			size = "0.022 * safeZoneH";
-			
-			x = 0.804219 * safezoneW + safezoneX;
-			y = 0.73815 * safezoneH + safezoneY;
-			w = 0.099 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class EMSRequest : life_RscButtonMenu {
-			idc = 3022;
-			tooltip = "$STR_CELL_THWRequest";
-			onButtonClick = "[] call TON_fnc_cell_emsrequest";
-			size = "0.022 * safeZoneH";
-			
-			x = 0.804219 * safezoneW + safezoneX;
-			y = 0.7915 * safezoneH + safezoneY;
-			w = 0.099 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class TextAdminButton : life_RscButtonMenu {
-			idc = 3017;
-			tooltip = "$STR_CELL_TextAdmins";
-			onButtonClick = "[] call TON_fnc_cell_textadmin";
-			size = "0.022 * safeZoneH";
-			
-			x = 0.804219 * safezoneW + safezoneX;
-			y = 0.8465 * safezoneH + safezoneY;
-			w = 0.099 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class AdminMsgAllButton : life_RscButtonMenu {
-			idc = 3021;
-			tooltip = "$STR_CELL_AdminMSGAll";
-			onButtonClick = "[] call TON_fnc_cell_adminmsgall";
-			size = "0.022 * safeZoneH";
-			
-			x = 0.938281 * safezoneW + safezoneX;
-			y = 0.896 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonSyncData : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "[] call SOCK_fnc_syncData;";
-			size = "0.022 * safeZoneH";
-			x = 0.907344 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "$STR_PM_SyncData";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonClose : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "closeDialog 0;closeDialog 0;";
-			x = 0.783594 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "$STR_Global_Close";
-			size = "0.022 * safeZoneH";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-		
-		class ButtonHome : Life_RscButtonMenu {
-			idc = -1;
-			onButtonClick = "closeDialog 0;";
-			x = 0.845468 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-			
-			tooltip = "HOME";
-			size = "0.022 * safeZoneH";
-			
-			colorBackground[] = {0,0,0,0};
-			colorBackgroundFocused[] = {0,0,0,0};
-			colorBackground2[] = {0,0,0,0};
-			color[] = {1,1,1,1};
-			colorFocused[] = {0,0,0,0};
-			color2[] = {0,0,0,0};
-			colorText[] = {1,1,1,1};
-		};
-	};
+    class controlsBackground {
+        class Life_RscTitleBackground: Life_RscText {
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+            idc = -1;
+            x = 0.1;
+            y = 0.2;
+            w = 0.64;
+            h = (1 / 25);
+        };
+
+        class MainBackground: Life_RscText {
+            colorBackground[] = {0, 0, 0, 0.7};
+            idc = -1;
+            x = 0.1;
+            y = 0.2 + (11 / 250);
+            w = 0.64;
+            h = 0.3 - (5 / 250);
+        };
+    };
+
+    class controls {
+        class Title: Life_RscTitle {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = 3001;
+            text = "$STR_CELL_Title";
+            x = 0.1;
+            y = 0.2;
+            w = 0.6;
+            h = (1 / 25);
+        };
+
+        class TextToSend: Life_RscTitle {
+            colorBackground[] = {0, 0, 0, 0};
+            idc = 3002;
+            text = "$STR_CELL_TextToSend";
+            x = 0.1;
+            y = 0.25;
+            w = 0.6;
+            h = (1 / 25);
+        };
+
+        class textEdit: Life_RscEdit {
+            idc = 3003;
+            text = "";
+            sizeEx = 0.030;
+            x = 0.11;
+            y = 0.3;
+            w = 0.62;
+            h = 0.03;
+        };
+
+        class TextMsgButton: Life_RscButtonMenu {
+            idc = 3015;
+            text = "$STR_CELL_TextMSGBtn";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_textmsg";
+            x = 0.11;
+            y = 0.35;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class PlayerList: Life_RscCombo {
+            idc = 3004;
+            x = 0.11;
+            y = 0.4;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class TextCopButton: Life_RscButtonMenu {
+            idc = 3016;
+            text = "$STR_CELL_TextPolice";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_textcop";
+            x = 0.32;
+            y = 0.35;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class TextAdminButton: Life_RscButtonMenu {
+            idc = 3017;
+            text = "$STR_CELL_TextAdmins";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_textadmin";
+            x = 0.53;
+            y = 0.35;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class AdminMsgButton: Life_RscButtonMenu {
+            idc = 3020;
+            text = "$STR_CELL_AdminMsg";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_adminmsg";
+            x = 0.32;
+            y = 0.4;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class AdminMsgAllButton: Life_RscButtonMenu {
+            idc = 3021;
+            text = "$STR_CELL_AdminMSGAll";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_adminmsgall";
+            x = 0.53;
+            y = 0.4;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class EMSRequest: Life_RscButtonMenu {
+            idc = 3022;
+            text = "$STR_CELL_EMSRequest";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_emsrequest";
+            x = 0.11;
+            y = 0.45;
+            w = 0.2;
+            h = (1 / 25);
+        };
+
+        class CloseButtonKey: Life_RscButtonMenu {
+            idc = -1;
+            text = "$STR_Global_Close";
+            onButtonClick = "closeDialog 0;";
+            x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.51 + (1 / 50);
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+    };
 };

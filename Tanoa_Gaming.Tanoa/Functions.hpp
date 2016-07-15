@@ -112,7 +112,17 @@ class Life_Client_Core {
         class vehicleAnimate {};
         class vehicleWeightCfg {};
     };
-
+	
+	class CopPlaceables	{
+	    file = "core\cop\placeables";
+	    class placeablesInit {};
+	    class placeablesMenu {};
+	    class placeablesRemoveAll {};
+	    class placeablePlace {};
+	    class placeableCancel {};
+	    class placeablesPlaceComplete {};
+    };
+	
     class Cop {
         file = "core\cop";
         class bountyReceive {};

@@ -18,7 +18,7 @@ _door = 0;
 for "_i" from 1 to _doors do {
     _selPos = _building selectionPosition format["Door_%1_trigger",_i];
     _worldSpace = _building modelToWorld _selPos;
-        if (player distance _worldSpace < 5) exitWith {_door = _i;};
+        if (player distance _worldSpace < 3) exitWith {_door = _i;};
 };
 
 if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
@@ -39,8 +39,8 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 switch (typeOf _building) do {
-    case "Land_Offices_01_V1_F": {_cpRate = 0.004;};
-    default {_cpRate = 0.08;}
+    case "Land_Dome_Big_F": {_cpRate = 0.5;};
+    default {_cpRate = 0.008;}
 };
 
 for "_i" from 0 to 1 step 0 do {

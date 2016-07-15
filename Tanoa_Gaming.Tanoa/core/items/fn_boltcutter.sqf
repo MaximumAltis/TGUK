@@ -11,10 +11,10 @@ _building = param [0,objNull,[objNull]];
 
 if (isNull _building) exitWith {};
 if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
-if (((nearestObject [[8450.05,12489.3,0],"Land_Offices_01_V1_F"]) == _building || (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {
+if (((nearestObject [[11715.5,3168.84,0],"Land_Dome_Big_F"]) == _building || (nearestObject [[11717.9,3173.73,0],"Land_Cargo_HQ_V4_F"]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {
     hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))]
 };
-if ((typeOf _building) == "Land_Research_house_V1_F" && (nearestObject [[8450.05,12489.3,0],"Land_Offices_01_V1_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Bolt_Exploit"};
+if ((typeOf _building) == "Land_Cargo_HQ_V4_F" && (nearestObject [[11715.5,3168.84,0],"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Bolt_Exploit"};
 if (isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 
 _doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"numberOfDoors");
@@ -28,7 +28,7 @@ for "_i" from 1 to _doors do {
 if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
 if ((_building getVariable [format["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
 
-if ((nearestObject [[8450.05,12489.3,0],"Land_Offices_01_V1_F"]) == _building || (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
+if ((nearestObject [[11715.5,3168.84,0],"Land_Dome_Big_F"]) == _building || (nearestObject [[11717.9,3173.73,0],"Land_Cargo_HQ_V4_F"]) == _building) then {
     [[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 } else {
     [0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
@@ -47,8 +47,8 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 switch (typeOf _building) do {
-    case "Land_Dome_Big_F": {_cpRate = 0.003;};
-    case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
+    case "Land_Dome_Big_F": {_cpRate = 0.01;};
+    case "Land_Cargo_HQ_V4_F": {_cpRate = 0.0015;};
     default {_cpRate = 0.08;}
 };
 

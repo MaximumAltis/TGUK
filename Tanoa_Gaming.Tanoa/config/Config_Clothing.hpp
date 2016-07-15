@@ -136,24 +136,24 @@ class Clothing {
         side = "cop";
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, { "", "", -1 } },
-            { "U_B_GEN_Commander_F", "Uniform", 250, { "", "", -1 } }
+            { "U_B_GEN_Commander_F", "Uniform", 0, { "", "", -1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
-            { "H_Cap_police", "", 100, { "", "", -1 } }
+            { "H_Cap_police", "", 0, { "", "", -1 } }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, { "", "", -1 } },
-            { "G_Aviator", "", 100, { "", "", -1 } },
-            { "G_Diving", "", 500, { "", "", -1 } }
+            { "G_Aviator", "", 0, { "", "", -1 } },
+            { "G_Diving", "", 0, { "", "", -1 } }
         };
         vests[] = {
             { "NONE", "Remove Vest", 0, { "", "", -1 } },
-            { "V_TacVest_blk_POLICE", "Police Vest", 1000, { "", "", -1 } }
+            { "V_TacVest_blk_POLICE", "Police Vest", 0, { "", "", -1 } }
         };
         backpacks[] = {
             { "NONE", "Remove Backpack", 0, { "", "", -1 } },
-            { "B_AssaultPack_cbr", "", 700, { "", "", -1 } }
+            { "B_AssaultPack_cbr", "", 0, { "", "", -1 } }
         };
     };
 

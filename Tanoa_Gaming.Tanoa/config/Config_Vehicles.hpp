@@ -198,7 +198,7 @@ class LifeCfgVehicles {
         vItemSpace = 45;
 		vFuelSpace = 12500;
         licenses[] = { {"boat"}, {""}, {""}, {""} };
-        price = 5000;
+        price = 7000;
         textures[] = {
 			{ "Civilian", "civ", {
                 "\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_civilian_CO.paa"
@@ -356,7 +356,7 @@ class LifeCfgVehicles {
         vItemSpace = 85;
 		vFuelSpace = 12500;
         licenses[] = { {"boat"}, {""}, {""}, {""} };
-        price = 22000;
+        price = 17000;
         textures[] = { };
     };
 
@@ -957,7 +957,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 450;
        vFuelSpace = 12500;
         licenses[] = { {"boat"}, {""}, {""}, {""} };
-        price = 750000;
+        price = 45000;
         textures[] = {};
     };
 	

@@ -19,6 +19,7 @@ StartProgress = false;
 
 // Loads weather script
 // [] execVM "core\Scripts\weather.sqf";
+[] execVM "core\Scripts\safezone.sqf";
 
 //--- Disable some features of the ArmA engine.
 enableRadio false; //--- Radio messages

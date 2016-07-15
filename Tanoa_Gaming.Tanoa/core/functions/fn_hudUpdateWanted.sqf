@@ -45,9 +45,9 @@ aFunction =
 
 myBounty call aFunction;
 waitUntil{!isNil "stringedMyBounty"};
-((uiNamespace getVariable ["osefStatusBar",displayNull]) displayCtrl 1203) ctrlSetText format["$%1",stringedMyBounty];
+//((uiNamespace getVariable ["osefStatusBar",displayNull]) displayCtrl 1203) ctrlSetText format["$%1",stringedMyBounty];
 uiSleep 1;
 bountyToAdd = 0;
-stringedMyBounty = nil;
+//stringedMyBounty = nil;
 
 [] spawn life_fnc_hudUpdateWanted;

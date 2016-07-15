@@ -1,7 +1,7 @@
 #include "..\..\script_macros.hpp"
 /*waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
-
+some german guy?
 4 cutRsc ["osefStatusBar","PLAIN"];
 
 [] spawn {
@@ -18,7 +18,7 @@ disableSerialization;
 };*/
 waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
-
+stringedMyBounty = nil;
 4 cutRsc ["osefStatusBar","PLAIN"];
 
 [] spawn {
@@ -61,13 +61,12 @@ while {true} do
         _yy = (format[_grid]) select  [3,3];
         _hunger = round(life_hunger);
 		_cash = [life_cash] call life_fnc_numberText;
-		_bank = [myBounty] call life_fnc_numberText;
+		_bank = stringedBounty;
         _thirst = round(life_thirst);
         _damage = round ((1 - (damage player)) * 100);
         _FpsHud = round (diag_fps);
 		_UpTime = 14392 - serverTime;
         _UpTimeHUD = [_UpTime,"HH:MM:SS"] call BIS_fnc_secondsToString;
-        //neu ende
 		_toxPercent = round(life_thirst);
 		_energy = round(life_thirst);
 		_energyPercent =  floor((_energy / 2500 ) * 100);

@@ -45,10 +45,7 @@ aFunction =
  
 myBounty call aFunction;
 waitUntil{!isNil "stringedMyBounty"};
-((uiNamespace getVariable "osefStatusBar")displayCtrl 1203)ctrlSetStructuredText parseText
-            format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\bank1.paa'/>%1",stringedMyBounty];
 uiSleep 1;
 bountyToAdd = 0;
-stringedMyBounty = nil;
  
 [] spawn life_fnc_hudUpdateWanted;

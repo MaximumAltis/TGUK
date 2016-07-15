@@ -29,6 +29,16 @@ class osefStatusBar {
             };
         };
 		
+		class LIFE_TGUK_LOGO: life_RscPicture	{
+        idc = 2207;
+
+        text = "textures\watermark2.paa"; //--- ToDo: Localize;
+        x = -8.01657e-005 * safezoneW + safezoneX;
+        y = 0.9071 * safezoneH + safezoneY;
+        w = 0.0579474 * safezoneW;
+        h = 0.0970164 * safezoneH;
+		};
+		
         class statusBarCash {
 			idc = 555557;
 			x = safezoneX + safezoneW - 0.18;

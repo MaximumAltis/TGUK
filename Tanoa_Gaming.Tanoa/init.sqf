@@ -18,7 +18,7 @@ StartProgress = false;
 [] execVM "core\Scripts\fastrope.sqf";
 
 // Loads weather script
-[] execVM "core\Scripts\weather.sqf";
+// [] execVM "core\Scripts\weather.sqf";
 
 //--- Disable some features of the ArmA engine.
 enableRadio false; //--- Radio messages

@@ -39,7 +39,7 @@ _Btn8 = CONTROL(37400,Btn8);
 
 life_pInact_curTarget = _curTarget;
 if (_curTarget isKindOf "House_F" && playerSide isEqualTo west) exitWith {
-    if ((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget || (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget) then {
+    if ((nearestObject [[11715.5,3168.84,0],"Land_Dome_Big_F"]) == _curTarget || (nearestObject [[11717.9,3173.73,0],"Land_Cargo_HQ_V4_F"]) == _curTarget) then {
 
         _Btn1 ctrlSetText localize "STR_pInAct_Repair";
         _Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_repairDoor; closeDialog 0;";
@@ -125,5 +125,15 @@ if (!(_curTarget in life_vehicles) || isNil {_curTarget getVariable "house_owner
         };
         _Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_lightHouseAction; closeDialog 0;";
         _Btn3 ctrlShow true;
+		
+		if (_curTarget getVariable ["alarme",true]) then { // Código adicionado
+        _Btn4 ctrlSetText "Alarm Off";
+        _Btn4 buttonSetAction "life_pInact_curTarget setVariable ['alarme',false,true]; closeDialog 0;";
+        _Btn4 ctrlshow true;
+        } else {
+        _Btn4 ctrlSetText "Alarm On";
+        _Btn4 buttonSetAction "life_pInact_curTarget setVariable ['alarme',true,true]; closeDialog 0;";
+        _Btn4 ctrlshow true;
+        };
     };
 };

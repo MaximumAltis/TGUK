@@ -48,7 +48,7 @@ class osefStatusBar {
 			shadow = 2;
 			colorBackground[] = { 0, 0, 0, 0.3 };
 			font = "PuristaSemibold";
-			size = 0.05;
+			size = 0.03;
 			type = 13;
 			style = 1;
 			text="";
@@ -67,7 +67,7 @@ class osefStatusBar {
 			shadow = 2;
 			colorBackground[] = { 0, 0, 0, 0.3 };
 			font = "PuristaSemibold";
-			size = 0.05;
+			size = 0.03;
 			type = 13;
 			style = 1;
 			text="";

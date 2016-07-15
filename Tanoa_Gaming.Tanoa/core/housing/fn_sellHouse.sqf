@@ -35,6 +35,7 @@ if (_action) then {
     };
 
     _house setVariable ["locked",false,true];
+	_house setVariable ["alarme",false,true]; // Código adicionado
     deleteMarkerLocal format["house_%1",_house getVariable "uid"];
     _house setVariable ["uid",nil,true];
 

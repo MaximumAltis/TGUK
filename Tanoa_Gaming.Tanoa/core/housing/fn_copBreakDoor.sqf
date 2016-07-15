@@ -21,6 +21,11 @@ if ((_house getVariable [format["bis_disabled_Door_%1",_door],0]) isEqualTo 0) e
 
 life_action_inUse = true;
 
+if(_house getVariable "alarme") then { // Código adicionado
+    [_house]call life_fnc_alarme;
+    [2,"STR_House_Raid_NOTF",true,[(_house getVariable "house_owner") select 1]] remoteExecCall ["life_fnc_broadcast",RCLIENT]; // Essa mensagem aparecerá para todos os players online no servidor, caso deseje desativar é opcional.
+};
+
 //Setup the progress bar
 disableSerialization;
 _title = localize "STR_House_Raid_Progress";

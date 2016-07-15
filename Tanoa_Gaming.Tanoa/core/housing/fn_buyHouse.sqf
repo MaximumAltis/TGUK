@@ -51,6 +51,7 @@ if (_action) then {
     _house setVariable ["locked",true,true];
     _house setVariable ["containers",[],true];
     _house setVariable ["uid",floor(random 99999),true];
+    _house setVariable ["alarme",true,true]; // Código adicionado
 
     life_vehicles pushBack _house;
     life_houses pushBack [str(getPosATL _house),[]];

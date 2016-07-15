@@ -18,7 +18,6 @@ some german guy?
 };*/
 waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
-stringedMyBounty = nil;
 4 cutRsc ["osefStatusBar","PLAIN"];
 
 [] spawn {
@@ -61,7 +60,6 @@ while {true} do
         _yy = (format[_grid]) select  [3,3];
         _hunger = round(life_hunger);
 		_cash = [life_cash] call life_fnc_numberText;
-		_bank = stringedBounty;
         _thirst = round(life_thirst);
         _damage = round ((1 - (damage player)) * 100);
         _FpsHud = round (diag_fps);
@@ -133,8 +131,4 @@ while {true} do
 			
     ((uiNamespace getVariable "osefStatusBar")displayCtrl 555557)ctrlSetStructuredText parseText 
             format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\money.paa'/>%1",_cash];
-			
-    ((uiNamespace getVariable "osefStatusBar")displayCtrl 1203)ctrlSetStructuredText parseText 
-            format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\bank1.paa'/>%1",_bank];
-    }; 
 };

@@ -89,8 +89,8 @@ switch (playerSide) do {
                 player setObjectTextureGlobal [0, "textures\COPUNIFORMHigh.jpg"];
          };
 		 
-		 if (unitBackpack player isEqualTo "B_AssaultPack_cbr") then {
-                player setObjectTextureGlobal [0, ""];
+		 if (backpack player == "B_AssaultPack_cbr") then {
+                backpackContainer player setObjectTextureGlobal [0, ""];
          };
     };
 

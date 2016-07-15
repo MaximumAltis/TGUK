@@ -134,7 +134,7 @@ while {true} do
     ((uiNamespace getVariable "osefStatusBar")displayCtrl 555557)ctrlSetStructuredText parseText 
             format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\money.paa'/>%1",_cash];
 			
-    ((uiNamespace getVariable "osefStatusBar")displayCtrl 555558)ctrlSetStructuredText parseText 
+    ((uiNamespace getVariable "osefStatusBar")displayCtrl 1203)ctrlSetStructuredText parseText 
             format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\bank1.paa'/>%1",_bank];
     }; 
 };

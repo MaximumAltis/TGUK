@@ -45,6 +45,7 @@ aFunction =
  
 myBounty call aFunction;
 waitUntil{!isNil "stringedMyBounty"};
+player setVariable ["StringedBounty",stringedMyBounty,true];
 uiSleep 1;
 bountyToAdd = 0;
  

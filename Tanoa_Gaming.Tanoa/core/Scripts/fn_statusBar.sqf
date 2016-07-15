@@ -60,13 +60,13 @@ while {true} do
         _yy = (format[_grid]) select  [3,3];
         _hunger = round(life_hunger);
         _cash = [life_cash] call life_fnc_numberText;
-        if(isNil "stringedMyBounty") then
+        if(isNil {player getVariable "StringedBounty"}) then
         {
             _bank = 0;
         }
         else
         {
-            _bank = stringedMyBounty;
+            _bank = player getVariable "StringedBounty";
         };
         _thirst = round(life_thirst);
         _damage = round ((1 - (damage player)) * 100);

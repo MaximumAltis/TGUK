@@ -61,7 +61,7 @@ while {true} do
         _yy = (format[_grid]) select  [3,3];
         _hunger = round(life_hunger);
 		_cash = [life_cash] call life_fnc_numberText;
-		_bank = [life_atmbank] call life_fnc_numberText;
+		_bank = [myBounty] call life_fnc_numberText;
         _thirst = round(life_thirst);
         _damage = round ((1 - (damage player)) * 100);
         _FpsHud = round (diag_fps);
@@ -136,6 +136,6 @@ while {true} do
             format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\money.paa'/>%1",_cash];
 			
     ((uiNamespace getVariable "osefStatusBar")displayCtrl 555558)ctrlSetStructuredText parseText 
-            format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\bank.paa'/>%1",_bank];
+            format["<t shadow='1' shadowColor='#000000'><img size='1.6' shadowColor='#000000' image='icons\bank1.paa'/>%1",_bank];
     }; 
 };

@@ -7,15 +7,6 @@ class agb
     
     class controlsBackground
     {
-		class BGha: Life_RscPicture
-		{
-			idc = 38531;
-			text = "textures\bg.jpg";
-			x = 0 * safezoneW + safezoneX;
-			y = 0 * safezoneH + safezoneY;
-			w = 1 * safezoneW;
-			h = 1 * safezoneH;
-		};
         class RscTitleBackground : Life_RscText
         {
             colorBackground[] = {1,0.537,0,0.7};

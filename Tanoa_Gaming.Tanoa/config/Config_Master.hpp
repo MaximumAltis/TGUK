@@ -49,7 +49,7 @@ class Life_Settings {
 
     /* Channel 7 News Station Configurations */
     news_broadcast_cost = 1375000; //Cost for a player to send a news station broadcast.
-    news_broadcast_cooldown = 600000; //Time in minutes that is required between news station broadcasts. (Default = 20 minutes)
+    news_broadcast_cooldown = 120; //Time in minutes that is required between news station broadcasts. (Default = 20 minutes)
     news_broadcast_header_length = 60; //Number of characters that a header can consist of. Anything over this may clip. This depends on the font size and various other factors. Adjust with caution.
 
     /* Clothing System Configurations */
@@ -85,7 +85,7 @@ class Life_Settings {
     restricted_weapons[] = { "" };
 
     /* Jail System Configurations */
-    jail_seize_vItems[] = { "spikeStrip","lockpick","goldbar","blastingcharge","boltcutter","defusekit","heroin_unprocessed","heroin_processed","cannabis","marijuana","cocaine_unprocessed","cocaine_processed","turtle_raw" }; //Define VIRTUAL items you want to be removed from players upon jailing here. Use "jail_seize_inventory" for Arma inventory items.
+    jail_seize_vItems[] = { "spikeStrip","lockpick","goldbar","blastingcharge","boltcutter","defusekit","heroin_unprocessed","heroin_processed","cannabis","marijuana","cocaine_unprocessed","cocaine_processed","turtle_raw","ziptie" }; //Define VIRTUAL items you want to be removed from players upon jailing here. Use "jail_seize_inventory" for Arma inventory items.
     jail_seize_inventory = false; //Set to true to run the cop seize script on inmates. False will remove only weapons and magazines otherwise. (Basically used in case cops forget to seize items). [See Lines 106-111 below]
     sendtoJail_locations[] = { "GeorgetownPoliceHQ", "jail_tester1", "Police_Spawn_1", "cop_car_2", "GeorgetownPoliceHQ_1" }; //Enter the variableName from the mission.sqm here to allow cops to send a person to jail at these locations.
 
@@ -104,7 +104,7 @@ class Life_Settings {
     paycheck_med = 7500; //Payment for medics
 
     paycheck_period = 15; //Scaled in minutes
-    bank_transferTax = .15; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier
+    bank_transferTax = .07; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier
 
     /* Player Job System Configurations */
     delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10" };

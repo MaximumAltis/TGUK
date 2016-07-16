@@ -44,6 +44,11 @@ switch (true) do {
         [cursorObject] spawn life_fnc_defuseKit;
         closeDialog 0;
     };
+	
+	case (_item isEqualTo "ziptie"): {
+        [cursorObject] spawn life_fnc_ziptieAction;
+        closeDialog 0;
+    };
 
     case (_item isEqualTo "storagesmall"): {
         [false] call life_fnc_storageBox;

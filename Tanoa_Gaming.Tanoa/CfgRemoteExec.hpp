@@ -45,6 +45,7 @@ class CfgRemoteExec {
         F(life_fnc_receiveMoney,CLIENT)
         F(life_fnc_removeLicenses,CLIENT)
         F(life_fnc_restrain,CLIENT)
+		F(life_fnc_ziptie,CLIENT)
         F(life_fnc_revived,CLIENT)
         F(life_fnc_robPerson,CLIENT)
         F(life_fnc_robReceive,CLIENT)

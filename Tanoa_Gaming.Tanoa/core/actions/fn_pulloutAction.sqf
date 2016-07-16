@@ -31,7 +31,7 @@ if(speed _veh > 1) exitWith {};
 	};
 
 		case civilian: { //im a civ, i pull out when she has zip ties on huehuehue
-			if((_x getVariable "restrainedType") == "zip") then {
+			if(_x getVariable ["restrained",true,true];) then {
 				_x setVariable ["transporting",false,true];
 				_x setVariable ["Escorting",false,true];
 				[_x] remoteExecCall ["life_fnc_pulloutVeh", _x];

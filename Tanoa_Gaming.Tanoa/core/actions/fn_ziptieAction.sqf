@@ -36,8 +36,8 @@ if(!isPlayer _unit) exitWith {};
 
 _unit setVariable["restrained",true,true];
 _unit setVariable["restrainedType","zip",true];
-[[player], "life_fnc_zipTie", _unit, false] spawn life_fnc_MP;
-[[getPlayerUID player,player getVariable["realname",profileName],"203"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+[player] remoteExec ["life_fnc_zipTie",_unit];
+//[[getPlayerUID player,player getVariable["realname",profileName],"203"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 [[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 hint "You have been added to the wanted list for kidnapping";
 [0,"STR_NOTF_Ziptied",true,[_unit GetVariable["realname", name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",west];

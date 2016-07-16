@@ -17,10 +17,10 @@ if (isNull _cop) exitWith {};
     private "_time";
     for "_i" from 0 to 1 step 0 do {
         _time = time;
-        waitUntil {(time - _time) > (5 * 60)};
+        waitUntil {(time - _time) > (30 * 60)};
 
         if (!(player getVariable ["restrained",false])) exitWith {};
-        if (!([west,getPos player,30] call life_fnc_nearUnits) && (player getVariable ["restrained",false]) && isNull objectParent player) exitWith {
+        if (!([west,getPos player,30000] call life_fnc_nearUnits) && (player getVariable ["restrained",false]) && isNull objectParent player) exitWith {
             player setVariable ["restrained",false,true];
             player setVariable ["Escorting",false,true];
             player setVariable ["transporting",false,true];

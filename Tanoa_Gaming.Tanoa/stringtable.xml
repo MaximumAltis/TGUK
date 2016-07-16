@@ -7639,6 +7639,12 @@
             <Portuguese>O roubo falhou por uma causa desconhecida.</Portuguese>
             <Polish>Napad się nie udał z niewiadomych powodów.</Polish>
         </Key>
+		<Key ID="STR_NOTF_Ziptied">
+            <Original>Message 1</Original>
+        </Key>
+		<Key ID="STR_NOTF_ZiptiedCiv">
+            <Original>Message 2</Original>
+        </Key>
         <Key ID="STR_NOTF_FRRobbery_Success">
             <Original>£%1 was stolen from the robbery on the federal reserve</Original>
             <Czech>£%1 byl ukraden z loupeže na federální rezervy</Czech>

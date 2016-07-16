@@ -105,6 +105,7 @@ class Life_Client_Core {
         class robReceive {};
         class tazed {};
 		class zipTie {};
+		class civInteractionMenu {};
     };
 
     class Config {
@@ -350,7 +351,7 @@ class Life_Client_Core {
 		class wantedAddP {};
 		class InfoMenu {};
 		class bankMenu {};
-		class licMenu {};
+		//class licMenu {};
 		class p_openApps {}
     };
 

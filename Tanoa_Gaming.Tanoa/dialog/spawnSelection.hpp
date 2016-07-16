@@ -20,7 +20,7 @@ class life_spawn_selection
 		class tablet_main: life_RscPicture
 		{
 			idc = 1200;
-			text = "images\maxresdefault.jpg";
+			text = "textures\maxresdefault.jpg";
 			x = -0.7125;
 			y = -0.42;
 			w = 2.425;

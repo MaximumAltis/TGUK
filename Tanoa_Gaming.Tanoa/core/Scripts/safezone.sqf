@@ -36,7 +36,7 @@ A lot of this is just C&P with different code. It's kinda simple to add / remove
 
 #define PZ_MSG "You are entering the Police Base. Do not Kill or Rob here!"
 
-#define CIV_MSG "You are entering a Civilian SafeZone. Do not commit crimes, rob people, or kill!"
+#define CIV_MSG "You are now in a GreenZone - You cannot commit any crimes, rob or kill anyone!"
 
 #define KOS_MSG "You are entering a KOS (Kill on sight) area. You may commit crimes, rob, and kill people without initation."
 

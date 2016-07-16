@@ -29,7 +29,7 @@ class VirtualShops {
         side = "civ";
         license = "rebel";
         level[] = { "", "", -1, "" };
-        items[] = { "waterBottle", "tbacon", "redgull", "bloodbag", "pickaxe", "toolkit", "fuelFull", "lockpick", "boltCutter", "blastingCharge" };
+        items[] = { "waterBottle", "tbacon", "redgull", "bloodbag", "pickaxe", "toolkit", "fuelFull", "lockpick", "ziptie", "boltCutter", "blastingCharge" };
     };
 
     class gang {
@@ -253,8 +253,8 @@ class VirtualItems {
         variable = "lockpick";
         displayName = "STR_Item_Lockpick";
         weight = 2;
-        buyPrice = 29750;
-        sellPrice = 23750;
+        buyPrice = 9000;
+        sellPrice = 7500;
         illegal = true;
         edible = -1;
         icon = "icons\ico_lockpick.paa";

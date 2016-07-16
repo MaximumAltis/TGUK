@@ -62,6 +62,7 @@ class Life_Client_Core {
         class surrender {};
         class ticketAction {};
         class unrestrain {};
+		class ziptieAction {};
     };
 	
 	class jobs {
@@ -103,6 +104,7 @@ class Life_Client_Core {
         class robPerson {};
         class robReceive {};
         class tazed {};
+		class zipTie {};
     };
 
     class Config {
@@ -290,6 +292,7 @@ class Life_Client_Core {
         class placestorage {};
         class spikeStrip {};
         class storageBox {};
+		class zipTieSound {};
     };
 
     class Medical_System {

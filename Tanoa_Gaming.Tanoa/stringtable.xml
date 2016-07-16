@@ -3282,6 +3282,9 @@
             <Portuguese>%1 foi imobilizado por %2</Portuguese>
             <Polish>%1 został skuty przez %2</Polish>
         </Key>
+		<Key ID="STR_NOTF_RestrainedCiv">
+			<Original>%1 was ziptied by %2</Original>
+		</Key>
         <Key ID="STR_NOTF_Searching">
             <Original>Searching...</Original>
             <Czech>Hledám ...</Czech>
@@ -6589,6 +6592,9 @@
         </Key>
 		<Key ID="STR_Item_goldflake2">
             <Original>Gold</Original>
+        </Key>
+		<Key ID="STR_Item_Ziptie">
+            <Original>Zipties</Original>
         </Key>
     </Package>
     <Package name="Life_License">

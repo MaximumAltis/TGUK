@@ -118,6 +118,20 @@ switch (_code) do {
             case civilian: {if (!visibleMap) then {[] spawn life_fnc_civMarkers;}};
         };
     };
+	
+	case 44:
+	{
+		if(_shift) then {_handled = true;};
+		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget GetVariable "Escorting") && !(cursorTarget GetVariable "restrained") && speed cursorTarget < 1 &&
+			!(player GetVariable["restrained",false]) && ((animationState cursorTarget) == "Incapacitated")  && (_veh == player) && (side cursorTarget != independent)) then
+		{
+			if([false,"ziptie",1] call life_fnc_handleInv) then
+			{
+				[] call life_fnc_zipTieAction;
+				[[player],"life_fnc_zipTieSound",nil,false] spawn life_fnc_MP;
+			};
+		};
+	};
 
     //Holster / recall weapon. (Shift + H)
     case 35: {

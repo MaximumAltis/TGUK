@@ -172,6 +172,17 @@ class VirtualItems {
         icon = "icons\ico_pickaxe.paa";
     };
 	
+	class ziptie {
+        variable = "ziptie";
+        displayName = "STR_Item_Ziptie";  //TODO: Localize
+        weight = 1;
+        buyPrice = 15000;
+        sellPrice = -1;
+        illegal = true;
+        edible = -1;
+        icon = "icons\zipties.paa";
+    };
+	
 	class bloodbag {
         variable = "bloodbag";
         displayName = "STR_Item_Bloodbag";

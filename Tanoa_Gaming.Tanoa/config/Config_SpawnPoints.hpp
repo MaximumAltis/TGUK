@@ -23,7 +23,7 @@ class CfgSpawnPoints {
         class Kavala {
             displayName = "George Town";
             spawnMarker = "civ_spawn_1";
-            icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+            icon = "icons\pyrgosspawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
@@ -31,7 +31,7 @@ class CfgSpawnPoints {
         class Athira {
             displayName = "Lijnhaven";
             spawnMarker = "civ_spawn_4";
-            icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+            icon = "icons\pyrgosspawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
@@ -39,7 +39,7 @@ class CfgSpawnPoints {
         class Pyrgos {
             displayName = "Katkoula";
             spawnMarker = "civ_spawn_2";
-            icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+            icon = "icons\pyrgosspawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
@@ -49,7 +49,7 @@ class CfgSpawnPoints {
         class Kavala {
             displayName = "Georgetown HQ";
             spawnMarker = "cop_spawn_1";
-            icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+            icon = "icons\policespawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
@@ -57,7 +57,7 @@ class CfgSpawnPoints {
         class Athira {
             displayName = "Lijnhaven HQ";
             spawnMarker = "Police_Spawn_1";
-            icon = "\a3\ui_f\data\map\MapControl\fuelstation_ca.paa";
+            icon = "icons\policespawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
@@ -65,7 +65,7 @@ class CfgSpawnPoints {
         class Air {
             displayName = "Air HQ";
             spawnMarker = "cop_spawn_4";
-            icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
+            icon = "icons\policespawn.paa";
             licenses[] = { { "cAir", true } };
             level[] = { "life_coplevel", "SCALAR", 2 };
         };
@@ -76,14 +76,14 @@ class CfgSpawnPoints {
         class Kavala {
             displayName = "Georgetown Hospital";
             spawnMarker = "medic_spawn_1";
-            icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
+            icon = "icons\medicspawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
 		class Athira {
             displayName = "Lijnhaven Hospital";
             spawnMarker = "medic_spawn_2";
-            icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
+            icon = "icons\medicspawn.paa";
             licenses[] = { { "", true } };
             level[] = { "", "", -1 };
         };
